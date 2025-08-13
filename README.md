@@ -61,44 +61,8 @@ A complete hands-on Security Orchestration, Automation, and Response (SOAR) + En
 5. Goto Automation
 6. D&R Rules
 7. New Rule (Response + Detect)
-8. Response Rule:
-        events:
-        - NEW_PROCESS
-        - EXISTING_PROCESS
-        op: and
-        rules:
-        - op: is windows
-        - op: or
-          rules:
-          - case sensitive: false
-            op: ends with
-            path: event/FILE_PATH
-            value: lazagne.exe
-          - case sensitive: false
-            op: ends with
-            path: event/COMMAND_LINE
-            value: all
-          - case sensitive: false
-            op: contains
-            path: event/COMMAND_LINE
-            value: lazagne
-          - case sensitive: false
-            op: is
-            path: event/HASH
-            value: 'dc06d62ee95062e714f2566c95b8edaabfd387023b1bf98a09078b84007d5268'
-   9. Detect Rule:
-       - action: report
-          metadata:
-            author: dipak
-            description: Detects Lazagne (SOAR-EDR Tool)
-            falsepositives:
-            - Unlikely
-            level: medium
-            tags:
-            - attack.credential_access
-          name: dipak - HACKTOOL - Lazagne (SOAR-EDR)
-10. Test Rule by clicking on Test Event
-11. Confirm logs under Detection
+8. Test Rule by clicking on Test Event
+9. Confirm logs under Detection
 
 ### Part 4: Setup and Integrate Slack & Tines
 
