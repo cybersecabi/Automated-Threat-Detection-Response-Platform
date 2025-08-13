@@ -110,6 +110,7 @@ Built custom detection and automated response logic
 Integrated multiple platforms to simulate a real-world SOC environment
 
 ✍️ Author
+
 Abisath Anton Baby Sabeena
    
    
